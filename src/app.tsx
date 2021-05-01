@@ -4,9 +4,11 @@ import { QIcon } from "@nodegui/nodegui";
 import { StepOne } from "./components/stepone";
 import { StepTwo } from "./components/steptwo";
 import nodeguiIcon from "../assets/nodegui.jpg";
+import Schedule from "./components/Schedule";
 
 const minSize = { width: 500, height: 520 };
 const winIcon = new QIcon(nodeguiIcon);
+
 class App extends React.Component {
   render() {
     return (
@@ -17,11 +19,10 @@ class App extends React.Component {
         styleSheet={styleSheet}
       >
         <View style={containerStyle}>
-          <Text id="welcome-text">Welcome to NodeGui 🐕</Text>
-          <Text id="step-1">1. Play around</Text>
-          <StepOne />
-          <Text id="step-2">2. Debug</Text>
-          <StepTwo />
+            <Schedule></Schedule>
+
+
+
         </View>
       </Window>
     );
